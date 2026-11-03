@@ -1,6 +1,6 @@
 # Zahidur Abedin
 
-Platform engineer in Toronto. I run a self-hosted LLM inference stack, build LLM systems with hard boundaries, and run an agent-driven build pipeline that takes an intent to a tested release.
+Platform engineer in Toronto. I run a self-hosted LLM inference stack, build LLM systems with hard boundaries, and build coding-agent tooling where each agent's role is enforced by its tools.
 
 ## Operates inference and trains models
 
@@ -19,10 +19,10 @@ Repos: [selfhosted-llm-platform](https://github.com/zahidur124/selfhosted-llm-pl
 
 Repos: [research-gate](https://github.com/zahidur124/research-gate)
 
-## Runs an agent-driven software factory
+## Builds coding-agent tooling with enforced roles
 
-- A harness built on a `features.json` contract and role crews, where the coder never edits tests and every step has a verifier and a reviewer.
-- An unattended build pipeline: intent → design crew → build crew → live-test crew → release, with no session open.
-- The same approach packaged for GitHub Copilot.
+- Four GitHub Copilot agents (builder, reader, verifier, reviewer), each with its own tool list; the reader holds read-only tools, because in testing an instruction alone did not stop it giving advice.
+- A pre-tool-use hook that denies force-push, `git reset --hard`, `rm -rf` on a root or home directory, and access to `.env` and private key files.
+- A weekly live check runs the latest Copilot CLI against the kit: the agents load, the hook blocks, and the verifier reports FAIL when it should.
 
-Repos: [agent-build-crew](https://github.com/zahidur124/agent-build-crew) · [copilot-kit](https://github.com/zahidur124/copilot-kit)
+Repos: [copilot-kit](https://github.com/zahidur124/copilot-kit)
