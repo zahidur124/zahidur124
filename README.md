@@ -21,8 +21,8 @@ Repos: [research-gate](https://github.com/zahidur124/research-gate)
 
 ## Builds coding-agent tooling with enforced roles
 
-- Four GitHub Copilot agents (builder, reader, verifier, reviewer), each with its own tool list; the reader holds read-only tools, because in testing an instruction alone did not stop it giving advice.
+- Eight GitHub Copilot agents (builder, reader, verifier, reviewers, researcher and data analyst), each with its own tool list; the reader holds read-only tools, because in testing an instruction alone did not stop it giving advice.
+- Fifteen skills for build and test, dependency upgrades, API contract checks and document work, plus path-scoped working rules for four languages.
 - A pre-tool-use hook that denies force-push, `git reset --hard`, `rm -rf` on a root or home directory, and access to `.env` and private key files.
-- A weekly live check runs the latest Copilot CLI against the kit: the agents load, the hook blocks, and the verifier reports FAIL when it should.
 
-Repos: [copilot-kit](https://github.com/zahidur124/copilot-kit)
+Repos: [copilot-agent-kit](https://github.com/zahidur124/copilot-agent-kit)
