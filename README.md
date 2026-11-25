@@ -12,7 +12,7 @@ Platform engineer in Toronto. I run a self-hosted LLM inference stack, build LLM
 
 - A production LLM pipeline for a creator business: classification, contract review, receipt reading and reply drafting, with a per-tenant run log and golden tests.
 - A trading research agent where the LLM writes JSON rows, never code, and can only reduce risk. Paper trading and signals only.
-- A signal desk where every model reply is checked against a JSON schema and is treated as data, never as a size or a limit.
+- A signal desk where the model answers in a closed JSON schema and its output is data, never a size or a limit.
 - A research gate where deterministic checks own recall and the LLM layers can only add findings.
 
 ## Builds coding-agent tooling with enforced roles
