@@ -4,7 +4,7 @@ Platform engineer in Toronto. I run a self-hosted LLM inference stack, build LLM
 
 ## Operates inference and trains models
 
-- A self-hosted gateway (llama-swap in front of vLLM) serves chat, embedding and reranking models, with one NVFP4-quantized chat model resident on the GPU and embedding and reranking on CPU.
+- A self-hosted gateway (llama-swap in front of vLLM) serves 5 models, with a 27B model in NVFP4 as the resident chat model and CPU-side embedding and reranking.
 - A QLoRA fine-tune scored by a blind judge on a held-out split.
 - Hybrid retrieval (full-text search fused with RRF, optional cross-encoder rerank) measured by its own eval harness.
 
